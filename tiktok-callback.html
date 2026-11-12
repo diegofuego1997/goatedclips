@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connecting TikTok – Goated Clips</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap">
+<nav><a class="brand" href="index.html">GOATED CLIPS</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+<h1>Connecting <span>TikTok</span> …</h1>
+<p id="msg" class="lead">Handing the sign-in back to Goated Clips Uploader on this computer.</p>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var msg = document.getElementById("msg");
+  if (q.get("error")) {
+    msg.textContent = "TikTok sign-in was cancelled or failed: " + (q.get("error_description") || q.get("error"));
+    return;
+  }
+  if (!q.get("code")) { msg.textContent = "No sign-in code received."; return; }
+  // Goated Clips Uploader listens locally on this computer only.
+  location.replace("http://127.0.0.1:8765/tiktok/callback" + location.search);
+})();
+</script>
+</div></body></html>

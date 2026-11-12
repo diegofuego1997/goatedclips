@@ -13,3 +13,4 @@ a{color:var(--accent)}
 .lead{font-size:20px;color:var(--fg)}
 .meta{color:var(--muted);font-size:14px}
 footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.yt{display:flex;gap:14px;align-items:flex-start;margin:28px 0;padding:18px;border:1px solid var(--line);border-radius:12px}.yt svg{flex:none;margin-top:4px}.yt p{margin:0}
